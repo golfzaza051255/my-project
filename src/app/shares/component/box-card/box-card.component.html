@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div *ngFor="let data of dataCard" class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src={{data.img}} class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">{{ data.deteil }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
