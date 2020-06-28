@@ -45,9 +45,7 @@ export class HomeComponent implements OnInit {
         deteil: 'บรู๊ค (นักดาบฮานาอุตะ" บรูค)'
       }
     ];
-
     this.dataCard = data;
-
   }
 
 
