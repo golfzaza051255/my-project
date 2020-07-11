@@ -6,6 +6,9 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { BoxCardComponent } from './shares/component/box-card/box-card.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MyServiceService } from './shares/service/my-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,8 +26,10 @@ import { BoxCardComponent } from './shares/component/box-card/box-card.component
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
     ]),
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [MyServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
