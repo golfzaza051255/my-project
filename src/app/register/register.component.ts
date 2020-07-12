@@ -26,24 +26,23 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  //save 
+  // save
   submitForm() {
-    debugger
-    //case notfound in condition 
+    // case notfound in condition
     if (this.registerForm.invalid) {
       return false;
 
-    } else { //case success
-      console.log(this.registerForm.value)
+    } else { // case success
+      console.log(this.registerForm.value);
 
-      //register
+      // register
       this.myService.register(this.registerForm.value).subscribe(
         (error) => console.log(error)
       );
     }
   }
 
-  //reset
+  // reset
   resetForm() {
     this.registerForm.reset();
   }
