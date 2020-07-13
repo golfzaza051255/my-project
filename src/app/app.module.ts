@@ -7,8 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { BoxCardComponent } from './shares/component/box-card/box-card.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MyServiceService } from './shares/service/my-service.service';
+import { MyService } from './shares/service/my.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,16 +21,11 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      { path: '', redirectTo: '/home', pathMatch: 'full' },
-      { path: 'home', component: HomeComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent },
-    ]),
+    AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [MyServiceService],
+  providers: [MyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
