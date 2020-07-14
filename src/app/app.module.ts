@@ -13,7 +13,7 @@ import { BoxCardComponent } from './shares/component/box-card/box-card.component
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    BoxCardComponent
+    BoxCardComponent,
   ],
   imports: [
     BrowserModule,
