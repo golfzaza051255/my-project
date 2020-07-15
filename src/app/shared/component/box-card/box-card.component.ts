@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { BoxCard } from '../../interface/shaers';
+import { BoxCard } from '../../interface/shared';
 
 @Component({
   selector: 'app-box-card',
@@ -17,9 +17,7 @@ export class BoxCardComponent implements OnInit {
   getImg(data) {
     const path = '/assets/image/' + data;
     console.log('LOG path', path);
-
     return path;
   }
-
 
 }

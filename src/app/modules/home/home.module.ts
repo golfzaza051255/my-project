@@ -2,21 +2,24 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HomeLoginComponent } from './home-login/home-login.component';
-import { RouterModule } from '@angular/router';
+import { HomeRegisterComponent } from './home-register/home-register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HomeRoutingModule } from './home-routing.module';
+import { SharedModule } from '../../shared/shared.module';
 
 
 
 @NgModule({
   declarations: [
     HomePageComponent,
-    HomeLoginComponent
+    HomeLoginComponent,
+    HomeRegisterComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild([
-      { path: '', component: HomePageComponent },
-      { path: 'login', component: HomeLoginComponent },
-    ]),
+    ReactiveFormsModule,
+    HomeRoutingModule,
+    SharedModule
   ]
 })
 export class HomeModule { }

@@ -1,5 +1,5 @@
-import { Injectable, Input } from '@angular/core';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,18 +10,10 @@ export class HomeService {
   private _$userType: BehaviorSubject<any> = new BehaviorSubject<any>({});
   constructor() { }
 
-  /**
-   * Getter $userType
-   * @return {Observable<any> }
-   */
   public get $userType(): Observable<any> {
     return this._$userType.asObservable();
   }
 
-  /**
-   * Setter $userType
-   * @param {Observable<any> } value
-   */
   public set $userType(value: Observable<any>) {
     value.subscribe(data => {
       this._$userType.next(data);

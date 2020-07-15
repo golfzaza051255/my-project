@@ -1,23 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
-import { BoxCardComponent } from './shares/component/box-card/box-card.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MyService } from './shares/service/my.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    HomeComponent,
-    RegisterComponent,
-    BoxCardComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [MyService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

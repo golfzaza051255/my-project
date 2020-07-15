@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-const API_URL = environment.api_url;
-
 @Injectable({
   providedIn: 'root'
 })
-export class MyService {
+export class ShaerdService {
+
+  private API_URL = environment.api_url;
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class MyService {
   };
 
   public register(body: any) {
-    return this.http.post<any>(API_URL + '/resgister', body, this.httpOption);
+    return this.http.post<any>(this.API_URL + '/resgister', body, this.httpOption);
   }
 
 }

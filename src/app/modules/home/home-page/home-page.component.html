@@ -1,3 +1,21 @@
-<p>home-page works!</p>
+<div style="text-align:center">
+    <div class="bg-light">
+        <h1> Welcome to {{ proJect }} </h1>
+        <img src="\assets\image\001.png" name="aboutme" class="widthimage">
+        <!-- <h3 class="media-heading"> {{ nameEn }} <small></small></h3> -->
+        <h4>
+            <span><strong>ชื่อ: </strong></span>
+            <span class="label label-warning">{{ nameTh1 }}</span>
+        </h4>
+        <h4>
+            <span><strong>ชื่อ: </strong></span>
+            <span class="label label-warning">{{ nameTh2 }}</span>
+        </h4>
 
-<!-- <router-outlet></router-outlet> -->
+        <br>
+        <hr>
+        <app-box-card [dataCard]="dataCard"></app-box-card>
+        <hr>
+        <br>
+    </div>
+</div>

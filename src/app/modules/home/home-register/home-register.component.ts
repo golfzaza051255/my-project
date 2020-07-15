@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { MyService } from '../shares/service/my.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ShaerdService } from 'src/app/shared/service/shaerd.service';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-home-register',
+  templateUrl: './home-register.component.html',
+  styleUrls: ['./home-register.component.css']
 })
-export class RegisterComponent implements OnInit {
-
-  constructor(private fb: FormBuilder, private myService: MyService) { }
+export class HomeRegisterComponent implements OnInit {
 
   registerForm: FormGroup;
+
+  constructor(
+    private fb: FormBuilder,
+    private shaerdService: ShaerdService
+  ) { }
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
@@ -36,7 +39,7 @@ export class RegisterComponent implements OnInit {
       console.log(this.registerForm.value);
 
       // register
-      this.myService.register(this.registerForm.value).subscribe(
+      this.shaerdService.register(this.registerForm.value).subscribe(
         (error) => console.log(error)
       );
     }
