@@ -20,11 +20,12 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.homeService.$userType = of('ALL');
+    this.homeService.$userType = of('home');
   }
 
   logout() {
-    this.homeService.$userType = of('ALL');
-    this.router.navigate(['']);
+    const userType = 'home';
+    this.homeService.$userType = of(userType);
+    this.router.navigate([`${userType}`]);
   }
 }

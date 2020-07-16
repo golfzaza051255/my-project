@@ -31,8 +31,9 @@ export class HomeLoginComponent implements OnInit {
       return false;
     } else {
       console.log(this.loginForm.value);
-      this.homeService.$userType = of('USER');
-      this.router.navigate(['/user']);
+      const userType = 'user';
+      this.homeService.$userType = of(userType);
+      this.router.navigate([`${userType}`]);
     }
   }
 
